@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="47452d72-77af-489a-a5b3-e815c844f0a1" 
+        solutionId="47452d72-77af-489a-a5b3-e815c844f0a1" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Workflowly"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="65587ab9-300b-4f88-bf20-1e0dab08a574" />
+  </features>
+</package>

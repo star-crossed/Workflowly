@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{287FA23E-7C2F-471E-A1F9-68057BE739E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Workflowly</RootNamespace>
+    <AssemblyName>Workflowly</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{a0de5cf7-09f0-4094-87c1-93b1757b327f}</AppFeaturePartId>
+    <WspPartId>{4e3ed3c2-0dd7-4a7a-b2c0-93f8c4a8fa30}</WspPartId>
+    <WorkflowPartId>{dcef8ef5-06bb-49d2-b08c-2c43025685e5}</WorkflowPartId>
+    <CspkgPartId>{6540e2a6-001c-4d20-941b-81e270225c23}</CspkgPartId>
+    <SqlPackagePartId>{f5ff43a3-1fc8-4076-adb9-165eee9886f8}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="blockly\.gitignore" />
+    <Content Include="blockly\appengine\apple-touch-icon.png" />
+    <Content Include="blockly\appengine\favicon.ico" />
+    <Content Include="blockly\appengine\README.txt" />
+    <Content Include="blockly\appengine\redirect.html" />
+    <Content Include="blockly\appengine\robots.txt" />
+    <Content Include="blockly\appengine\storage.js" />
+    <Content Include="blockly\blockly_compressed.js" />
+    <Content Include="blockly\blockly_uncompressed.js" />
+    <Content Include="blockly\blocks\colour.js" />
+    <Content Include="blockly\blocks\lists.js" />
+    <Content Include="blockly\blocks\logic.js" />
+    <Content Include="blockly\blocks\loops.js" />
+    <Content Include="blockly\blocks\math.js" />
+    <Content Include="blockly\blocks\procedures.js" />
+    <Content Include="blockly\blocks\text.js" />
+    <Content Include="blockly\blocks\variables.js" />
+    <Content Include="blockly\blocks_compressed.js" />
+    <Content Include="blockly\core\block.js" />
+    <Content Include="blockly\core\blockly.js" />
+    <Content Include="blockly\core\blocks.js" />
+    <Content Include="blockly\core\block_svg.js" />
+    <Content Include="blockly\core\bubble.js" />
+    <Content Include="blockly\core\comment.js" />
+    <Content Include="blockly\core\connection.js" />
+    <Content Include="blockly\core\contextmenu.js" />
+    <Content Include="blockly\core\css.js" />
+    <Content Include="blockly\core\events.js" />
+    <Content Include="blockly\core\field.js" />
+    <Content Include="blockly\core\field_angle.js" />
+    <Content Include="blockly\core\field_checkbox.js" />
+    <Content Include="blockly\core\field_colour.js" />
+    <Content Include="blockly\core\field_date.js" />
+    <Content Include="blockly\core\field_dropdown.js" />
+    <Content Include="blockly\core\field_image.js" />
+    <Content Include="blockly\core\field_label.js" />
+    <Content Include="blockly\core\field_textinput.js" />
+    <Content Include="blockly\core\field_variable.js" />
+    <Content Include="blockly\core\flyout.js" />
+    <Content Include="blockly\core\generator.js" />
+    <Content Include="blockly\core\icon.js" />
+    <Content Include="blockly\core\inject.js" />
+    <Content Include="blockly\core\input.js" />
+    <Content Include="blockly\core\msg.js" />
+    <Content Include="blockly\core\mutator.js" />
+    <Content Include="blockly\core\names.js" />
+    <Content Include="blockly\core\procedures.js" />
+    <Content Include="blockly\core\scrollbar.js" />
+    <Content Include="blockly\core\toolbox.js" />
+    <Content Include="blockly\core\tooltip.js" />
+    <Content Include="blockly\core\trashcan.js" />
+    <Content Include="blockly\core\utils.js" />
+    <Content Include="blockly\core\variables.js" />
+    <Content Include="blockly\core\warning.js" />
+    <Content Include="blockly\core\widgetdiv.js" />
+    <Content Include="blockly\core\workspace.js" />
+    <Content Include="blockly\core\workspace_svg.js" />
+    <Content Include="blockly\core\xml.js" />
+    <Content Include="blockly\core\zoom_controls.js" />
+    <Content Include="blockly\dart_compressed.js" />
+    <Content Include="blockly\demos\blockfactory\blocks.js" />
+    <Content Include="blockly\demos\blockfactory\factory.js" />
+    <Content Include="blockly\demos\blockfactory\icon.png" />
+    <Content Include="blockly\demos\blockfactory\index.html" />
+    <Content Include="blockly\demos\blockfactory\link.png" />
+    <Content Include="blockly\demos\code\code.js" />
+    <Content Include="blockly\demos\code\icon.png" />
+    <Content Include="blockly\demos\code\icons.png" />
+    <Content Include="blockly\demos\code\index.html" />
+    <Content Include="blockly\demos\code\msg\ar.js" />
+    <Content Include="blockly\demos\code\msg\be-tarask.js" />
+    <Content Include="blockly\demos\code\msg\br.js" />
+    <Content Include="blockly\demos\code\msg\ca.js" />
+    <Content Include="blockly\demos\code\msg\cs.js" />
+    <Content Include="blockly\demos\code\msg\da.js" />
+    <Content Include="blockly\demos\code\msg\de.js" />
+    <Content Include="blockly\demos\code\msg\el.js" />
+    <Content Include="blockly\demos\code\msg\en.js" />
+    <Content Include="blockly\demos\code\msg\es.js" />
+    <Content Include="blockly\demos\code\msg\fa.js" />
+    <Content Include="blockly\demos\code\msg\fr.js" />
+    <Content Include="blockly\demos\code\msg\he.js" />
+    <Content Include="blockly\demos\code\msg\hrx.js" />
+    <Content Include="blockly\demos\code\msg\hu.js" />
+    <Content Include="blockly\demos\code\msg\ia.js" />
+    <Content Include="blockly\demos\code\msg\is.js" />
+    <Content Include="blockly\demos\code\msg\it.js" />
+    <Content Include="blockly\demos\code\msg\ja.js" />
+    <Content Include="blockly\demos\code\msg\ko.js" />
+    <Content Include="blockly\demos\code\msg\mk.js" />
+    <Content Include="blockly\demos\code\msg\ms.js" />
+    <Content Include="blockly\demos\code\msg\nb.js" />
+    <Content Include="blockly\demos\code\msg\nl.js" />
+    <Content Include="blockly\demos\code\msg\oc.js" />
+    <Content Include="blockly\demos\code\msg\pl.js" />
+    <Content Include="blockly\demos\code\msg\pms.js" />
+    <Content Include="blockly\demos\code\msg\pt-br.js" />
+    <Content Include="blockly\demos\code\msg\ro.js" />
+    <Content Include="blockly\demos\code\msg\ru.js" />
+    <Content Include="blockly\demos\code\msg\sc.js" />
+    <Content Include="blockly\demos\code\msg\sk.js" />
+    <Content Include="blockly\demos\code\msg\sr.js" />
+    <Content Include="blockly\demos\code\msg\sv.js" />
+    <Content Include="blockly\demos\code\msg\ta.js" />
+    <Content Include="blockly\demos\code\msg\th.js" />
+    <Content Include="blockly\demos\code\msg\tlh.js" />
+    <Content Include="blockly\demos\code\msg\tr.js" />
+    <Content Include="blockly\demos\code\msg\uk.js" />
+    <Content Include="blockly\demos\code\msg\vi.js" />
+    <Content Include="blockly\demos\code\msg\zh-hans.js" />
+    <Content Include="blockly\demos\code\msg\zh-hant.js" />
+    <Content Include="blockly\demos\code\style.css" />
+    <Content Include="blockly\demos\fixed\icon.png" />
+    <Content Include="blockly\demos\fixed\index.html" />
+    <Content Include="blockly\demos\generator\icon.png" />
+    <Content Include="blockly\demos\generator\index.html" />
+    <Content Include="blockly\demos\graph\icon.png" />
+    <Content Include="blockly\demos\graph\index.html" />
+    <Content Include="blockly\demos\headless\icon.png" />
+    <Content Include="blockly\demos\headless\index.html" />
+    <Content Include="blockly\demos\index.html" />
+    <Content Include="blockly\demos\interpreter\acorn_interpreter.js" />
+    <Content Include="blockly\demos\interpreter\icon.png" />
+    <Content Include="blockly\demos\interpreter\index.html" />
+    <Content Include="blockly\demos\maxBlocks\icon.png" />
+    <Content Include="blockly\demos\maxBlocks\index.html" />
+    <Content Include="blockly\demos\plane\blocks.js" />
+    <Content Include="blockly\demos\plane\generated\ar.js" />
+    <Content Include="blockly\demos\plane\generated\be-tarask.js" />
+    <Content Include="blockly\demos\plane\generated\br.js" />
+    <Content Include="blockly\demos\plane\generated\ca.js" />
+    <Content Include="blockly\demos\plane\generated\da.js" />
+    <Content Include="blockly\demos\plane\generated\de.js" />
+    <Content Include="blockly\demos\plane\generated\el.js" />
+    <Content Include="blockly\demos\plane\generated\en.js" />
+    <Content Include="blockly\demos\plane\generated\es.js" />
+    <Content Include="blockly\demos\plane\generated\fa.js" />
+    <Content Include="blockly\demos\plane\generated\fr.js" />
+    <Content Include="blockly\demos\plane\generated\he.js" />
+    <Content Include="blockly\demos\plane\generated\hrx.js" />
+    <Content Include="blockly\demos\plane\generated\hu.js" />
+    <Content Include="blockly\demos\plane\generated\ia.js" />
+    <Content Include="blockly\demos\plane\generated\is.js" />
+    <Content Include="blockly\demos\plane\generated\it.js" />
+    <Content Include="blockly\demos\plane\generated\ja.js" />
+    <Content Include="blockly\demos\plane\generated\ko.js" />
+    <Content Include="blockly\demos\plane\generated\ms.js" />
+    <Content Include="blockly\demos\plane\generated\nb.js" />
+    <Content Include="blockly\demos\plane\generated\nl.js" />
+    <Content Include="blockly\demos\plane\generated\pl.js" />
+    <Content Include="blockly\demos\plane\generated\pms.js" />
+    <Content Include="blockly\demos\plane\generated\pt-br.js" />
+    <Content Include="blockly\demos\plane\generated\ro.js" />
+    <Content Include="blockly\demos\plane\generated\ru.js" />
+    <Content Include="blockly\demos\plane\generated\sc.js" />
+    <Content Include="blockly\demos\plane\generated\sv.js" />
+    <Content Include="blockly\demos\plane\generated\th.js" />
+    <Content Include="blockly\demos\plane\generated\tr.js" />
+    <Content Include="blockly\demos\plane\generated\uk.js" />
+    <Content Include="blockly\demos\plane\generated\vi.js" />
+    <Content Include="blockly\demos\plane\generated\zh-hans.js" />
+    <Content Include="blockly\demos\plane\generated\zh-hant.js" />
+    <Content Include="blockly\demos\plane\icon.png" />
+    <Content Include="blockly\demos\plane\index.html" />
+    <Content Include="blockly\demos\plane\plane.js" />
+    <Content Include="blockly\demos\plane\README.txt" />
+    <Content Include="blockly\demos\plane\slider.js" />
+    <Content Include="blockly\demos\plane\soy\SoyMsgExtractor.jar" />
+    <Content Include="blockly\demos\plane\soy\SoyToJsSrcCompiler.jar" />
+    <Content Include="blockly\demos\plane\soy\soyutils.js" />
+    <Content Include="blockly\demos\plane\style.css" />
+    <Content Include="blockly\demos\prettify.css" />
+    <Content Include="blockly\demos\prettify.js" />
+    <Content Include="blockly\demos\resizable\icon.png" />
+    <Content Include="blockly\demos\resizable\index.html" />
+    <Content Include="blockly\demos\resizable\overlay.html" />
+    <Content Include="blockly\demos\rtl\icon.png" />
+    <Content Include="blockly\demos\rtl\index.html" />
+    <Content Include="blockly\demos\storage\icon.png" />
+    <Content Include="blockly\demos\storage\index.html" />
+    <Content Include="blockly\demos\toolbox\icon.png" />
+    <Content Include="blockly\demos\toolbox\index.html" />
+    <Content Include="blockly\generators\dart.js" />
+    <Content Include="blockly\generators\dart\colour.js" />
+    <Content Include="blockly\generators\dart\lists.js" />
+    <Content Include="blockly\generators\dart\logic.js" />
+    <Content Include="blockly\generators\dart\loops.js" />
+    <Content Include="blockly\generators\dart\math.js" />
+    <Content Include="blockly\generators\dart\procedures.js" />
+    <Content Include="blockly\generators\dart\text.js" />
+    <Content Include="blockly\generators\dart\variables.js" />
+    <Content Include="blockly\generators\javascript.js" />
+    <Content Include="blockly\generators\javascript\colour.js" />
+    <Content Include="blockly\generators\javascript\lists.js" />
+    <Content Include="blockly\generators\javascript\logic.js" />
+    <Content Include="blockly\generators\javascript\loops.js" />
+    <Content Include="blockly\generators\javascript\math.js" />
+    <Content Include="blockly\generators\javascript\procedures.js" />
+    <Content Include="blockly\generators\javascript\text.js" />
+    <Content Include="blockly\generators\javascript\variables.js" />
+    <Content Include="blockly\generators\php.js" />
+    <Content Include="blockly\generators\php\colour.js" />
+    <Content Include="blockly\generators\php\lists.js" />
+    <Content Include="blockly\generators\php\logic.js" />
+    <Content Include="blockly\generators\php\loops.js" />
+    <Content Include="blockly\generators\php\math.js" />
+    <Content Include="blockly\generators\php\procedures.js" />
+    <Content Include="blockly\generators\php\text.js" />
+    <Content Include="blockly\generators\php\variables.js" />
+    <Content Include="blockly\generators\python.js" />
+    <Content Include="blockly\generators\python\colour.js" />
+    <Content Include="blockly\generators\python\lists.js" />
+    <Content Include="blockly\generators\python\logic.js" />
+    <Content Include="blockly\generators\python\loops.js" />
+    <Content Include="blockly\generators\python\math.js" />
+    <Content Include="blockly\generators\python\procedures.js" />
+    <Content Include="blockly\generators\python\text.js" />
+    <Content Include="blockly\generators\python\variables.js" />
+    <Content Include="blockly\javascript_compressed.js" />
+    <Content Include="blockly\media\1x1.gif" />
+    <Content Include="blockly\media\click.mp3" />
+    <Content Include="blockly\media\click.wav" />
+    <Content Include="blockly\media\delete.mp3" />
+    <Content Include="blockly\media\delete.wav" />
+    <Content Include="blockly\media\disconnect.mp3" />
+    <Content Include="blockly\media\disconnect.wav" />
+    <Content Include="blockly\media\handclosed.cur" />
+    <Content Include="blockly\media\handdelete.cur" />
+    <Content Include="blockly\media\handopen.cur" />
+    <Content Include="blockly\media\quote0.png" />
+    <Content Include="blockly\media\quote1.png" />
+    <Content Include="blockly\media\sprites.png" />
+    <Content Include="blockly\media\sprites.svg" />
+    <Content Include="blockly\msg\js\ar.js" />
+    <Content Include="blockly\msg\js\az.js" />
+    <Content Include="blockly\msg\js\ba.js" />
+    <Content Include="blockly\msg\js\bcc.js" />
+    <Content Include="blockly\msg\js\be-tarask.js" />
+    <Content Include="blockly\msg\js\bg.js" />
+    <Content Include="blockly\msg\js\bn.js" />
+    <Content Include="blockly\msg\js\br.js" />
+    <Content Include="blockly\msg\js\ca.js" />
+    <Content Include="blockly\msg\js\cs.js" />
+    <Content Include="blockly\msg\js\da.js" />
+    <Content Include="blockly\msg\js\de.js" />
+    <Content Include="blockly\msg\js\el.js" />
+    <Content Include="blockly\msg\js\en.js" />
+    <Content Include="blockly\msg\js\es.js" />
+    <Content Include="blockly\msg\js\fa.js" />
+    <Content Include="blockly\msg\js\fi.js" />
+    <Content Include="blockly\msg\js\fr.js" />
+    <Content Include="blockly\msg\js\he.js" />
+    <Content Include="blockly\msg\js\hi.js" />
+    <Content Include="blockly\msg\js\hrx.js" />
+    <Content Include="blockly\msg\js\hu.js" />
+    <Content Include="blockly\msg\js\ia.js" />
+    <Content Include="blockly\msg\js\id.js" />
+    <Content Include="blockly\msg\js\is.js" />
+    <Content Include="blockly\msg\js\it.js" />
+    <Content Include="blockly\msg\js\ja.js" />
+    <Content Include="blockly\msg\js\ko.js" />
+    <Content Include="blockly\msg\js\lb.js" />
+    <Content Include="blockly\msg\js\lki.js" />
+    <Content Include="blockly\msg\js\lrc.js" />
+    <Content Include="blockly\msg\js\lt.js" />
+    <Content Include="blockly\msg\js\mk.js" />
+    <Content Include="blockly\msg\js\ms.js" />
+    <Content Include="blockly\msg\js\nb.js" />
+    <Content Include="blockly\msg\js\nl.js" />
+    <Content Include="blockly\msg\js\oc.js" />
+    <Content Include="blockly\msg\js\pl.js" />
+    <Content Include="blockly\msg\js\pms.js" />
+    <Content Include="blockly\msg\js\pt-br.js" />
+    <Content Include="blockly\msg\js\pt.js" />
+    <Content Include="blockly\msg\js\ro.js" />
+    <Content Include="blockly\msg\js\ru.js" />
+    <Content Include="blockly\msg\js\sc.js" />
+    <Content Include="blockly\msg\js\sd.js" />
+    <Content Include="blockly\msg\js\shn.js" />
+    <Content Include="blockly\msg\js\sk.js" />
+    <Content Include="blockly\msg\js\sl.js" />
+    <Content Include="blockly\msg\js\sq.js" />
+    <Content Include="blockly\msg\js\sr.js" />
+    <Content Include="blockly\msg\js\sv.js" />
+    <Content Include="blockly\msg\js\ta.js" />
+    <Content Include="blockly\msg\js\tcy.js" />
+    <Content Include="blockly\msg\js\th.js" />
+    <Content Include="blockly\msg\js\tl.js" />
+    <Content Include="blockly\msg\js\tlh.js" />
+    <Content Include="blockly\msg\js\tr.js" />
+    <Content Include="blockly\msg\js\uk.js" />
+    <Content Include="blockly\msg\js\vi.js" />
+    <Content Include="blockly\msg\js\zh-hans.js" />
+    <Content Include="blockly\msg\js\zh-hant.js" />
+    <Content Include="blockly\msg\messages.js" />
+    <Content Include="blockly\php_compressed.js" />
+    <Content Include="blockly\python_compressed.js" />
+    <Content Include="blockly\tests\generators\colour.xml" />
+    <Content Include="blockly\tests\generators\functions.xml" />
+    <Content Include="blockly\tests\generators\index.html" />
+    <Content Include="blockly\tests\generators\lists.xml" />
+    <Content Include="blockly\tests\generators\logic.xml" />
+    <Content Include="blockly\tests\generators\loops1.xml" />
+    <Content Include="blockly\tests\generators\loops2.xml" />
+    <Content Include="blockly\tests\generators\loops3.xml" />
+    <Content Include="blockly\tests\generators\math.xml" />
+    <Content Include="blockly\tests\generators\text.xml" />
+    <Content Include="blockly\tests\generators\unittest.js" />
+    <Content Include="blockly\tests\generators\unittest_dart.js" />
+    <Content Include="blockly\tests\generators\unittest_javascript.js" />
+    <Content Include="blockly\tests\generators\unittest_php.js" />
+    <Content Include="blockly\tests\generators\unittest_python.js" />
+    <Content Include="blockly\tests\generators\variables.xml" />
+    <Content Include="blockly\tests\jsunit\blockly_test.js" />
+    <Content Include="blockly\tests\jsunit\block_test.js" />
+    <Content Include="blockly\tests\jsunit\connection_test.js" />
+    <Content Include="blockly\tests\jsunit\generator_test.js" />
+    <Content Include="blockly\tests\jsunit\index.html" />
+    <Content Include="blockly\tests\jsunit\names_test.js" />
+    <Content Include="blockly\tests\jsunit\workspace_test.js" />
+    <Content Include="blockly\tests\jsunit\xml_test.js" />
+    <Content Include="blockly\tests\playground.html" />
+    <Content Include="Elements.xml" />
+    <Content Include="Pages\WorkflowlyWebPart.aspx" />
+    <Content Include="WorkflowlyWebPart\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <None Include="blockly\.git" />
+    <None Include="blockly\.jshintignore" />
+    <None Include="blockly\appengine\app.yaml" />
+    <None Include="blockly\appengine\index.yaml" />
+    <None Include="blockly\appengine\index_redirect.py" />
+    <None Include="blockly\appengine\storage.py" />
+    <None Include="blockly\build.py" />
+    <None Include="blockly\COPYING" />
+    <None Include="blockly\demos\plane\soy\COPYING" />
+    <None Include="blockly\demos\plane\soy\README" />
+    <None Include="blockly\demos\plane\template.soy" />
+    <None Include="blockly\demos\plane\xlf\extracted_msgs.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ar.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_be-tarask.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_br.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ca.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_da.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_de.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_el.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_en.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_es.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_fa.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_fr.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_he.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_hrx.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_hu.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ia.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_is.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_it.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ja.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ko.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ms.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_nb.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_nl.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_pl.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_pms.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_pt-br.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ro.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_ru.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_sc.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_sv.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_th.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_tr.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_uk.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_vi.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_zh-hans.xlf" />
+    <None Include="blockly\demos\plane\xlf\translated_msgs_zh-hant.xlf" />
+    <None Include="blockly\i18n\common.py" />
+    <None Include="blockly\i18n\create_messages.py" />
+    <None Include="blockly\i18n\dedup_json.py" />
+    <None Include="blockly\i18n\json_to_js.py" />
+    <None Include="blockly\i18n\js_to_json.py" />
+    <None Include="blockly\i18n\tests.py" />
+    <None Include="blockly\i18n\xliff_to_json.py" />
+    <None Include="blockly\media\click.ogg" />
+    <None Include="blockly\media\delete.ogg" />
+    <None Include="blockly\media\disconnect.ogg" />
+    <None Include="blockly\msg\json\ar.json" />
+    <None Include="blockly\msg\json\az.json" />
+    <None Include="blockly\msg\json\ba.json" />
+    <None Include="blockly\msg\json\bcc.json" />
+    <None Include="blockly\msg\json\be-tarask.json" />
+    <None Include="blockly\msg\json\bg.json" />
+    <None Include="blockly\msg\json\bn.json" />
+    <None Include="blockly\msg\json\br.json" />
+    <None Include="blockly\msg\json\ca.json" />
+    <None Include="blockly\msg\json\cs.json" />
+    <None Include="blockly\msg\json\da.json" />
+    <None Include="blockly\msg\json\de.json" />
+    <None Include="blockly\msg\json\el.json" />
+    <None Include="blockly\msg\json\en.json" />
+    <None Include="blockly\msg\json\es.json" />
+    <None Include="blockly\msg\json\fa.json" />
+    <None Include="blockly\msg\json\fi.json" />
+    <None Include="blockly\msg\json\fr.json" />
+    <None Include="blockly\msg\json\he.json" />
+    <None Include="blockly\msg\json\hi.json" />
+    <None Include="blockly\msg\json\hrx.json" />
+    <None Include="blockly\msg\json\hu.json" />
+    <None Include="blockly\msg\json\ia.json" />
+    <None Include="blockly\msg\json\id.json" />
+    <None Include="blockly\msg\json\is.json" />
+    <None Include="blockly\msg\json\it.json" />
+    <None Include="blockly\msg\json\ja.json" />
+    <None Include="blockly\msg\json\ko.json" />
+    <None Include="blockly\msg\json\lb.json" />
+    <None Include="blockly\msg\json\lki.json" />
+    <None Include="blockly\msg\json\lrc.json" />
+    <None Include="blockly\msg\json\lt.json" />
+    <None Include="blockly\msg\json\mk.json" />
+    <None Include="blockly\msg\json\ms.json" />
+    <None Include="blockly\msg\json\nb.json" />
+    <None Include="blockly\msg\json\nl.json" />
+    <None Include="blockly\msg\json\oc.json" />
+    <None Include="blockly\msg\json\pl.json" />
+    <None Include="blockly\msg\json\pms.json" />
+    <None Include="blockly\msg\json\pt-br.json" />
+    <None Include="blockly\msg\json\pt.json" />
+    <None Include="blockly\msg\json\qqq.json" />
+    <None Include="blockly\msg\json\ro.json" />
+    <None Include="blockly\msg\json\ru.json" />
+    <None Include="blockly\msg\json\sc.json" />
+    <None Include="blockly\msg\json\sd.json" />
+    <None Include="blockly\msg\json\shn.json" />
+    <None Include="blockly\msg\json\sk.json" />
+    <None Include="blockly\msg\json\sl.json" />
+    <None Include="blockly\msg\json\sq.json" />
+    <None Include="blockly\msg\json\sr.json" />
+    <None Include="blockly\msg\json\sv.json" />
+    <None Include="blockly\msg\json\synonyms.json" />
+    <None Include="blockly\msg\json\ta.json" />
+    <None Include="blockly\msg\json\tcy.json" />
+    <None Include="blockly\msg\json\th.json" />
+    <None Include="blockly\msg\json\tl.json" />
+    <None Include="blockly\msg\json\tlh.json" />
+    <None Include="blockly\msg\json\tr.json" />
+    <None Include="blockly\msg\json\uk.json" />
+    <None Include="blockly\msg\json\vi.json" />
+    <None Include="blockly\msg\json\zh-hans.json" />
+    <None Include="blockly\msg\json\zh-hant.json" />
+    <None Include="blockly\package.json" />
+    <None Include="blockly\README.md" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9c0401a9-7d33-4c76-951d-37ab704adf11}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e3208d62-6d77-48b9-9fae-ba13899cab7e}</SharePointProjectItemId>
+    </None>
+    <None Include="WorkflowlyWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fa322d4d-6505-49c3-9705-af1b6358a40c}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f5ff43a3-1fc8-4076-adb9-165eee9886f8}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0261fc9f-b95d-4e44-b3b3-8a573e02ab64}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{27236c5c-0b7a-422c-b5c2-8c841862cc8f}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{47452d72-77af-489a-a5b3-e815c844f0a1}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{65587ab9-300b-4f88-bf20-1e0dab08a574}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
