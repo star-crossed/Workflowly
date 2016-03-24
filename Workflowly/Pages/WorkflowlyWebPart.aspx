@@ -42,20 +42,46 @@
     <script src="../blockly/blocks_compressed.js"></script>
     <script src="../blockly/msg/js/en.js"></script>
 
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
 </head>
 <body>
-    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+    <div class="ms-Grid"> 
+        <div class="ms-Grid-row">
+            <div id="blocklyArea" class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12" style="height:100%"></div>
+        </div>
+    </div>
+    <div id="blocklyDiv" style="position: absolute"></div>
     <xml id="toolbox" style="display: none">
-        <block type="controls_if"></block>
-        <block type="controls_repeat_ext"></block>
-        <block type="logic_compare"></block>
-        <block type="math_number"></block>
-        <block type="math_arithmetic"></block>
-        <block type="text"></block>
-        <block type="text_print"></block>
+        <category name="Logic" colour="210">...</category>
+        <category name="Loops" colour="120">...</category>
+        <category name="Math" colour="230">...</category>
+        <category name="Colour" colour="20">...</category>
+        <category name="Variables" colour="330" custom="VARIABLE"></category>
+        <category name="Functions" colour="290" custom="PROCEDURE"></category>
     </xml>
     <script>
-        var workspace = Blockly.inject('blocklyDiv', {toolbox: document.getElementById('toolbox')});
+        var blocklyArea = document.getElementById('blocklyArea');
+        var blocklyDiv = document.getElementById('blocklyDiv');
+        var workspace = Blockly.inject(blocklyDiv, {toolbox: document.getElementById('toolbox')});
+        var onresize = function(e) {
+            // Compute the absolute coordinates and dimensions of blocklyArea.
+            var element = blocklyArea;
+            var x = 0;
+            var y = 0;
+            do {
+                x += element.offsetLeft;
+                y += element.offsetTop;
+                element = element.offsetParent;
+            } while (element);
+            // Position blocklyDiv over blocklyArea.
+            blocklyDiv.style.left = x + 'px';
+            blocklyDiv.style.top = y + 'px';
+            blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+            blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+        };
+        window.addEventListener('resize', onresize, false);
+        onresize();
     </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 >
   <Properties>
     <Title>Workflowly</Title>
-    <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+    <StartPage>~appWebUrl/Pages/WorkflowlyWebPart.aspx?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
